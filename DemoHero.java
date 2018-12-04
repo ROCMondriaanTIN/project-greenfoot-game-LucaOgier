@@ -1,12 +1,12 @@
 
-import greenfoot.*;
+/*import greenfoot.*;
 import java.util.List;
 
 /**
  *
  * @author R. Springer
  */
-public class DemoHero extends Mover {
+/*public class DemoHero extends Mover {
 
     private final double gravity;
     private final double acc;
@@ -85,3 +85,4 @@ public class DemoHero extends Mover {
         return getImage().getHeight();
     }
 }
+*/

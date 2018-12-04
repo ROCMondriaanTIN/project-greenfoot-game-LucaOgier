@@ -3,7 +3,7 @@
  *
  * @author R. Springer
  */
-public class DemoTileFactory extends TileFactory {
+//public class DemoTileFactory extends TileFactory {
 
     /**
      * Voorbeeld hoe je een TileFactory kan gebruiken. Hierin zit de toegevoegde
@@ -11,7 +11,7 @@ public class DemoTileFactory extends TileFactory {
      * @param mapIcon
      * @return 
      */
-    @Override
+ /*   @Override
     public Tile createTile(int mapIcon) {
         Tile tile;
         switch (mapIcon) {
@@ -80,3 +80,4 @@ public class DemoTileFactory extends TileFactory {
         return tile;
     }
 }
+*/

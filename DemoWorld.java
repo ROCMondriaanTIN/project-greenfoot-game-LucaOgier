@@ -1,11 +1,11 @@
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+/*import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  *
  * @author R. Springer
  */
-public class DemoWorld extends World {
+/*public class DemoWorld extends World {
 
     // Declareren van CollisionEngine
     private CollisionEngine ce;
@@ -17,7 +17,7 @@ public class DemoWorld extends World {
      * Constructor for objects of class MyWorld.
      *
      */
-    public DemoWorld() {
+   /* public DemoWorld() {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 800, 1, false);
         this.setBackground("bg.png");
@@ -41,7 +41,7 @@ public class DemoWorld extends World {
 
         // initialiseren van de TileEngine klasse om de map aan de world toe te voegen
         te = new TileEngine(this, 60, 60);
-        te.setTileFactory(new DemoTileFactory());
+        //te.setTileFactory(new DemoTileFactory());
         te.setMap(map);
 
         // Declarenre en initialiseren van de camera klasse met de TileEngine klasse 
@@ -78,3 +78,4 @@ public class DemoWorld extends World {
     }
 
 }
+*/

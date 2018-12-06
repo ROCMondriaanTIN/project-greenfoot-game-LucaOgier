@@ -40,8 +40,9 @@ public class Hero extends Mover {
                 getWorld().removeObject(this);
                 Greenfoot.playSound ("Dead2.wav");
                 isDead = true;
-                break;
+                
             }
+            
         } 
 
     

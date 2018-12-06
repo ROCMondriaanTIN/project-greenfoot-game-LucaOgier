@@ -169,6 +169,7 @@ public class TileFactory {
                 tile.getImage().mirrorVertically(); 
 
                 tile.isSolid = true; 
+                tile.getImage().scale(57,20);
 
                 break; 
 
@@ -179,6 +180,7 @@ public class TileFactory {
                 tile.getImage().mirrorVertically(); 
 
                 tile.isSolid = true; 
+                tile.getImage().scale(57,20);
 
                 break; 
 
@@ -716,7 +718,7 @@ public class TileFactory {
 
                 tile.isSolid = false;
                 
-                tile.getImage().scale(50,167);
+                tile.getImage().scale(70,200);
 
                 break; 
 
@@ -725,7 +727,7 @@ public class TileFactory {
                 tile = new Tile("hill_largeAlt.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT); 
 
                 tile.isSolid = false;
-                tile.getImage().scale(48,146);
+                tile.getImage().scale(60,146);
 
                 break; 
 

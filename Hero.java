@@ -12,6 +12,7 @@ public class Hero extends Mover {
     private final double drag;
     private boolean isGrounded;
     private boolean isFacingLeft;
+    public boolean isDead;
     public Hero() {
         super();
         gravity = 9.8;
@@ -19,6 +20,7 @@ public class Hero extends Mover {
         drag = 0.8;
         isGrounded = true;
         isFacingLeft = false;
+        isDead = false;
         setImage("p1.png");
     }
 
@@ -37,13 +39,16 @@ public class Hero extends Mover {
             if (enemy != null) {
                 getWorld().removeObject(this);
                 Greenfoot.playSound ("Dead2.wav");
+                isDead = true;
                 break;
             }
         } 
+
+    
     }
 
     public void handleInput() {
-        if (Greenfoot.isKeyDown("space") && (isTouching(Tile.class) && (velocityY <= 0))){
+        if (Greenfoot.isKeyDown("space") && (isTouching(Tile.class) && (velocityY <= 0.00001))){
             velocityY = -15;
             setImage ("p1_jump.png");
             isGrounded = false;
@@ -64,10 +69,7 @@ public class Hero extends Mover {
         } else if (Greenfoot.isKeyDown("right")) {
             velocityX = 4.6723;
             isFacingLeft = false;
-            if (isGrounded = false)
-                setImage ("p1_jump.png");
-            else
-                setImage ("p1_walk01.png");                   
+            setImage ("p1_walk01");                
         }
     }
 

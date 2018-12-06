@@ -8,12 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Collectables extends Actor
 {
-    public void act() 
-    {
-        //Silver coins
-        //Gold coins
-        //Keys
-        //Diamonds
-        //stars (probably)
-    }    
+    public boolean ifCollected;
+    public boolean isOpened;
+    
+    public Collectables(){
+        super();
+        ifCollected = false;
+        isOpened = false;
+        setImage ("star.png");
+    }
 }

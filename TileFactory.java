@@ -1492,7 +1492,7 @@ public class TileFactory {
             case 185: 
 
                 tile = new Tile("cloud1.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT); 
-
+                tile.getImage().scale(200,175);
                 break; 
 
             case 186: 
@@ -1522,7 +1522,7 @@ public class TileFactory {
                 break; 
 
             case 190: 
-                tile = new Tile("coinSilver.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT); 
+                tile = new Tile("coinSilver.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT, TileType.COINSILVER); 
                 break; 
 
             case 191: 
@@ -1779,6 +1779,7 @@ public class TileFactory {
                 tile.isSolid = true; 
                 break;
 
+                
             default: 
                 tile = new Tile("grassMid.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT); 
                 tile.isSolid = true; 

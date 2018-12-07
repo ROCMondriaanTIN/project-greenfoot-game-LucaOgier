@@ -14,5 +14,11 @@ public enum TileType {
     WATER,
     BOX,
     SLOPE,
+    COINSILVER,
+    COINGOLD,
+    KEYBLUE,
+    KEYYELLOW,
+    KEYGREEN,
+    KEYRED,
     // Add your own tile types here
 }

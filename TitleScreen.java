@@ -1,6 +1,6 @@
    import greenfoot.*;
  
-public class TitleScreen extends ImagesTest
+public class TitleScreen extends World
 {
  
     /**
@@ -11,7 +11,7 @@ public class TitleScreen extends ImagesTest
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-        setImage("menu.png");
+        setBackground("menu.png");
         Greenfoot.start();
     }
     public void act()

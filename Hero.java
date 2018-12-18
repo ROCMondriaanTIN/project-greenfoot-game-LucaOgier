@@ -51,11 +51,9 @@ public class Hero extends Mover {
         this.tileEngine = tileEngine;
         this.collisionEngine = collisionEngine;
     }
-
     @Override
     public void act() {
         handleInput();
-        
         velocityX *= drag;
         velocityY += acc;
         if (velocityY > gravity) {
@@ -75,35 +73,24 @@ public class Hero extends Mover {
                 break;
             }
             List <Tile> tiles = collisionEngine.getCollidingTiles(this, true);
-            for(Tile tile : getIntersectingObjects(Tile.class)) {
+        for(Tile tile : getIntersectingObjects(Tile.class)) {
                 if (tile.type == TileType.COINSILVER) {
                     tileEngine.removeTile(tile);
                     Greenfoot.playSound ("Item4.wav");
                     return;
-        } 
-
-    
+        }
     }
 }
 }
-
-    public void handleInput() {
-        if (Greenfoot.isKeyDown("space") && (isTouching(Tile.class) && (velocityY <= 0.00001))){
-            velocityY = -10;
+public void handleInput() {
+     if (Greenfoot.isKeyDown("space") && (isTouching(Tile.class) && (velocityY <= 0.00001))){
+            velocityY = -12;
             setImage ("p1_jump.png");
             isGrounded = false;
             Greenfoot.playSound ("Jump4.wav");
-            
-            if (isFacingLeft = true){
-                setImage("p1_jump_L.png");
-            }
-            else {
-                setImage ("p1_jump.png");
-    }
-}
-        if (Greenfoot.isKeyDown("left")) {
+       }
+     if (Greenfoot.isKeyDown("left")) {
             velocityX = -4.6723;
-            
             animatieLeft();
             isFacingLeft = true;
         } else if (Greenfoot.isKeyDown("right")) {
@@ -112,110 +99,62 @@ public class Hero extends Mover {
             animatieRight();             
         }
     }
-
     public int getWidth() {
         return getImage().getWidth();
-        
     }
-
     public int getHeight() {
         return getImage().getHeight();
-        
     }
     public void animatieRight() {
-        if(frame == 1)
-        {
-            setImage(run12);
-        }
-        else if (frame == 2)
-        {
-            setImage(run13);
-        }
-        else if (frame == 3)
-        {
-            setImage(run14);
-        }
-        else if (frame == 4)
-        {
-            setImage(run15);
-        }
-        else if (frame == 5)
-        {
-            setImage(run16);
-        }
-        else if (frame == 6)
-        {
-            setImage(run17);
-        }
-        else if (frame == 7)
-        {
-            setImage(run18);
-        }
-        else if (frame == 8)
-        {
-            setImage(run19);
-        }
-        else if (frame == 9)
-        {
-            setImage(run20);
-        }
-        else if (frame == 10)
-        {
+        if(frame == 1){
+            setImage(run12);}
+        else if (frame == 2){
+            setImage(run13);}
+        else if (frame == 3){
+            setImage(run14);}
+        else if (frame == 4){
+            setImage(run15);}
+        else if (frame == 5){
+            setImage(run16);}
+        else if (frame == 6){
+            setImage(run17);}
+        else if (frame == 7){
+            setImage(run18);}
+        else if (frame == 8){
+            setImage(run19);}
+        else if (frame == 9){
+            setImage(run20);}
+        else if (frame == 10){
             setImage (run21);
             frame = 0;
             return;
         }
         frame ++;
-        
-        
-        
-        
        }
        
-           public void animatieLeft() {
-        if(frame == 1)
-        {
-            setImage(run1);
-        }
-        else if (frame == 2)
-        {
-            setImage(run2);
-        }
-        else if (frame == 3)
-        {
-            setImage(run3);
-        }
-        else if (frame == 4)
-        {
-            setImage(run4);
-        }
-        else if (frame == 5)
-        {
-            setImage(run5);
-        }
-        else if (frame == 6)
-        {
-            setImage(run6);
-        }
-        else if (frame == 7)
-        {
-            setImage(run7);
-        }
-        else if (frame == 8)
-        {
-            setImage(run8);
-        }
-        else if (frame == 9)
-        {
-            setImage(run9);
-        }
-        else if (frame == 10)
-        {
+    public void animatieLeft() {
+        if(frame == 1){
+            setImage(run1);}
+        else if (frame == 2){
+            setImage(run2);}
+        else if (frame == 3){
+            setImage(run3);}
+        else if (frame == 4){
+            setImage(run4);}
+        else if (frame == 5){
+            setImage(run5);}
+        else if (frame == 6){
+            setImage(run6);}
+        else if (frame == 7){
+            setImage(run7);}
+        else if (frame == 8){
+            setImage(run8);}
+        else if (frame == 9){
+            setImage(run9);}
+        else if (frame == 10){
             setImage (run10);
             frame = 0;
-            return;
-        }
+            return;}
         frame ++;
        }
-
 }

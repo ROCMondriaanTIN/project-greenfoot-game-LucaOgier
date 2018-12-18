@@ -5,9 +5,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author R. Springer
  */
 public class Level2 extends World{
-
     private CollisionEngine ce;
-
     /**
      * Constructor for objects of class MyWorld.
      *
@@ -49,7 +47,7 @@ public class Level2 extends World{
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
         addObject(hero, 300, 200);
-        addObject(new Enemy(), 1170, 410);
+        //addObject(new Enemy(), 1170, 410);
         
         // Force act zodat de camera op de juist plek staat.
         camera.act();

@@ -1,19 +1,10 @@
-  
-
-/** 
-
+ /** 
 * 
-
 * @author R. Springer 
-
 * "authore2 W.Schaegen 
-
 */ 
 
 public class TileFactory { 
-
-  
-
     /** 
 
      * Creates a Tile object based on the mapIcon number you give 
@@ -33,27 +24,18 @@ public class TileFactory {
         switch (mapIcon) { 
 
             case 0: 
-
                 tile = new Tile("box.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT); 
-
                 tile.isSolid = true; 
-
                 break; 
 
             case 1: 
-
                 tile = new Tile("boxAlt.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT); 
-
                 tile.isSolid = true; 
-
                 break; 
 
             case 2: 
-
                 tile = new Tile("boxCoin.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT); 
-
                 tile.isSolid = true; 
-
                 break; 
 
             case 3: 

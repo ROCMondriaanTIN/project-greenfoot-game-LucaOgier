@@ -12,7 +12,6 @@ public class Hero extends Mover {
     private final double acc;
     private final double drag;
     private boolean isGrounded;
-    private boolean isFacingLeft;
     public boolean isDead;
     private int frame = 1;
     private GreenfootImage run1 = new GreenfootImage("p1_walk01L.png");
@@ -45,7 +44,6 @@ public class Hero extends Mover {
         acc = 0.6;
         drag = 0.8;
         isGrounded = true;
-        isFacingLeft = false;
         isDead = false;
         setImage("p1.png");
         this.tileEngine = tileEngine;
@@ -84,18 +82,19 @@ public class Hero extends Mover {
 }
 public void handleInput() {
      if (Greenfoot.isKeyDown("space") && (isTouching(Tile.class) && (velocityY <= 0.00001))){
-            velocityY = -12;
+            velocityY = -11;
             setImage ("p1_jump.png");
             isGrounded = false;
-            Greenfoot.playSound ("Jump4.wav");
+            Greenfoot.playSound ("Jump.wav");
        }
+     if (Greenfoot.isKeyDown("down")){
+            setImage ("p1_duck.png");}
      if (Greenfoot.isKeyDown("left")) {
             velocityX = -4.6723;
             animatieLeft();
-            isFacingLeft = true;
+
         } else if (Greenfoot.isKeyDown("right")) {
             velocityX = 4.6723;
-            isFacingLeft = false;
             animatieRight();             
         }
     }
